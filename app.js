@@ -2,8 +2,12 @@
 //console.log("hello world") //debug
 //importing express
 const express = require("express");
+//calling the function that creates the process
 const app = express();
+//setting up port
 const port = 3000;
+//lets enable static  assets
+app.use(express.static('public'));
 //creating the endpoint
 app.get('/',(req,res)=>{
   res.send('welcome to my blog');
@@ -18,5 +22,5 @@ console.log(data);
 })
 
 app.listen(port,()=>{
-  console.log(`example app listening on port ${port}`)
+  console.log(`blog is  listening on port ${port}`)
 })
