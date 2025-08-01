@@ -15,9 +15,9 @@ app.get('/',(req,res)=>{
 //creating the endpoint bacheca to show our posts
 app.get('/bacheca',(req,res)=>{
   //importing array of posts
-const data = require("./data.js");
-//lets test if that worked
-console.log(data);
+  const data = require("./data.js");
+  //lets test if that worked
+  console.log(data);
   res.json(data)
 })
 
